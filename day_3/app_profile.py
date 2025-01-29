@@ -58,5 +58,4 @@ st.write(f"You can reach {name} at {email}.")
 if st.button("Click for a surprise!"):
     st.markdown("[Click here to view the surprise!](https://www.youtube.com/watch?v=dQw4w9WgXcQ)")
 
-if name == "main":
-    main()
+if name == "main": main()
