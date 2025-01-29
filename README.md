@@ -1,2 +1,1 @@
-[browser]
-hideFooter = true
+Streamlit app test run
