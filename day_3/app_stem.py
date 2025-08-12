@@ -1,9 +1,20 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import sys
 
-# Set page title
-st.set_page_config(page_title="Researcher Profile and STEM Data Explorer", layout="wide")
+# Detect if running under Streamlit; if not, provide a friendly message and exit gracefully.
+RUNNING_AS_STREAMLIT = True
+try:
+    # Set page title (must be the first Streamlit command)
+    st.set_page_config(page_title="Researcher Profile and STEM Data Explorer", layout="wide")
+except Exception:
+    RUNNING_AS_STREAMLIT = False
+
+if not RUNNING_AS_STREAMLIT:
+    if __name__ == "__main__":
+        print("This is a Streamlit application. To run it, use:\n\n    streamlit run day_3/app_stem.py\n\nTip: First install dependencies with:\n\n    pip install -r requirements.txt\n")
+    sys.exit(0)
 
 # Sidebar Menu
 st.sidebar.title("Navigation")
